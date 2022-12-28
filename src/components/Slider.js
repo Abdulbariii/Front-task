@@ -9,14 +9,11 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 import { Pagination } from "swiper";
-function Slider() {
-  const { data, loading, error } = useFetch(
-    "https://fronttask.techeyeco.com/api/ClientSide/GetGroup?GroupProductType=FrontPageSlider"
-  );
+function Slider({ data, loading, error }) {
   console.log(data);
   const baseUrl = "https://fronttask.techeyeco.com";
   return (
-    <div className="w-[40rem] h-[45rem] bg-white px-10 py-10">
+    <div className="w-[40rem] h-[45rem] bg-gradient-to-r from-sky-800 px-3 py-4">
       {error && <h1>{error}</h1>}
       {loading ? (
         <LoadingImage></LoadingImage>

@@ -11,15 +11,21 @@ export default function DiscountList() {
   const baseUrl = "https://fronttask.techeyeco.com";
   return (
     <div>
-      <h1 className="text-black text-5xl text-white py-2 mb-10 ">
-        Discount products
-      </h1>
+      <div className="flex gap-4  items-center  mb-32">
+        <div className="   bg-gradient-to-r from-red-500 h-2 w-52  "></div>
+        <h1 className="text-black text-6xl font-extrabold  py-2 ">
+          Discount products
+        </h1>
+      </div>
       <div className="w-full h-full text-black flex flex-wrap gap-20">
         {loading && <LoadingImage></LoadingImage>}
         {error && <h1>{error}</h1>}
         {data &&
           data.map((product) => (
-            <div key={product.id} className="h-fit w-80 px-5 py-5 bg-white">
+            <div
+              key={product.id}
+              className="h-fit w-80 px-5 py-5 bg-white hover:shadow-xl transition-all "
+            >
               {loading ? (
                 <LazyLoad height={262} threshold={0.2}>
                   <LoadingImage></LoadingImage>
@@ -40,6 +46,7 @@ export default function DiscountList() {
                       }}
                     />
                   </LazyLoad>
+
                   {product.discount > 0 ? (
                     <h1 className="bg-red-700 text-white right-[-50px] p-1 absolute top-[-10px] text-2xl transform rotate-12">
                       Discounted {product.discount}%

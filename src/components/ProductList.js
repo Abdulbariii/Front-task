@@ -34,15 +34,21 @@ export default function ProductList() {
   const baseUrl = "https://fronttask.techeyeco.com";
   return (
     <div>
-      <h1 className="text-black text-5xl text-white py-2 mb-10 ">
-        Products list
-      </h1>
+      <div className="flex gap-4  items-center  mb-32">
+        <div className="   bg-gradient-to-r from-indigo-500 h-2 w-52  "></div>
+        <h1 className="text-black text-6xl font-extrabold  py-2 ">
+          Products list
+        </h1>
+      </div>
       <div className="w-full h-full text-black flex flex-wrap gap-20">
         {loading && <LoadingImage></LoadingImage>}
         {error && <h1>{error}</h1>}
         {data &&
           data.map((product) => (
-            <div key={product.id} className="h-fit w-80 px-5 py-5 bg-white">
+            <div
+              key={product.id}
+              className="h-fit w-80 px-5 py-5 bg-white transition-all hover:shadow-xl"
+            >
               {loading ? (
                 <LazyLoad height={262} threshold={0.2}>
                   <LoadingImage></LoadingImage>
@@ -63,6 +69,7 @@ export default function ProductList() {
                   />
                 </LazyLoad>
               )}
+              <div className="   bg-gradient-to-r from-indigo-500 h-1 w-52  "></div>
 
               <p className="py-2 text-xl">{product.productTypeName}</p>
               <p className="text-lg">
@@ -79,7 +86,7 @@ export default function ProductList() {
       </div>
       <button
         onClick={fetchData}
-        className="bg-black text-white py-3 px-5 text-2xl mt-20"
+        className="bg-indigo-500 text-white py-3 px-5 text-2xl mt-20"
       >
         See more ...
       </button>

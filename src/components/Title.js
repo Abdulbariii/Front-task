@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 export default function Title() {
   return (
     <div className="">
-      <h1 className="bg-[#02010143] text-8xl text-white py-2 shadow-2xl">
+      <h1 className=" bg-gradient-to-r from-sky-800 text-8xl text-white py-2 shadow-2xl">
         {" "}
         <span className="font-normal">Fashino </span>{" "}
         <span className="font-medium ">Cloth</span>
       </h1>
-      <p className="text-xl w-2/4 py-10 shadow-xl text-white">
+      <p className="text-xl w-2/4 py-10 shadow-xl  bg-gradient-to-r  text-white">
         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
         consectetur, adipisci velit..Neque porro quisquam est qui dolorem ipsum
         quia dolor sit amet, consectetur, adipisci velit..Neque porro quisquam
