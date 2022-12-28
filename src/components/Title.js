@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Title() {
   return (
     <div className="">
@@ -15,10 +15,10 @@ export default function Title() {
         est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
       </p>
       <button className="bg-slate-100 text-5xl py-3 text-black px-5 ">
-        Products
+        <Link to={"/products"}> Products (Task B)</Link>
       </button>
 
-      <h1 className="mt-20 text-3xl bg-slate-900 bg-opacity-40 text-red-200 font-extrabold">
+      <h1 className="mt-20 text-3xl bg-slate-900 bg-opacity-60 text-red-500 font-extrabold">
         Scroll to see items(Task A){" "}
       </h1>
     </div>
